@@ -3,71 +3,135 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Automated Doctor — AI Automation for Busy People</title>
-  <meta name="description" content="Practical guides on AI agents, automation, and building personal AI systems — no coding required. By The Automated Doctor.">
+  <title>The Automated Doctor — AI Agents, Psychology Quizzes & Automation Guides</title>
+  <meta name="description" content="Doctor. Builder. Automator. Take the Dark Triad or Gaslighting quiz, read AI automation guides, or get the book on Amazon.">
+  <meta property="og:title" content="The Automated Doctor">
+  <meta property="og:description" content="AI agents for busy people. Psychology quizzes. No-code automation guides.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://theautomateddoctor.com">
   <link rel="canonical" href="https://theautomateddoctor.com/">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f0f0f; color: #e8e8e8; line-height: 1.7; }
-    a { color: #4ade80; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .nav { max-width: 800px; margin: 0 auto; padding: 24px 24px 0; display: flex; justify-content: space-between; align-items: center; }
-    .nav .logo { font-weight: 800; font-size: 1.1rem; color: #fff; }
-    .hero { max-width: 800px; margin: 0 auto; padding: 80px 24px 60px; text-align: center; }
-    .hero h1 { font-size: 2.8rem; font-weight: 900; color: #fff; line-height: 1.2; margin-bottom: 20px; }
-    .hero p { font-size: 1.2rem; color: #aaa; max-width: 560px; margin: 0 auto 32px; }
-    .cta-btn { display: inline-block; background: #4ade80; color: #000; font-weight: 700; padding: 14px 32px; border-radius: 8px; font-size: 1rem; }
-    .cta-btn:hover { background: #22c55e; text-decoration: none; }
-    .articles { max-width: 800px; margin: 0 auto; padding: 0 24px 80px; }
-    .articles h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 32px; border-bottom: 1px solid #222; padding-bottom: 12px; }
-    .card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 12px; padding: 28px; margin-bottom: 20px; transition: border-color 0.2s; }
-    .card:hover { border-color: #4ade80; }
-    .card h3 { font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
-    .card p { color: #aaa; font-size: 0.95rem; margin-bottom: 16px; }
-    .card a { font-size: 0.9rem; font-weight: 600; }
-    .tag { display: inline-block; background: #1a2e1a; color: #4ade80; font-size: 0.75rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; margin-bottom: 12px; }
-    footer { text-align: center; padding: 40px 24px; color: #555; font-size: 0.85rem; border-top: 1px solid #1a1a1a; }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#0a0a0a;color:#e8e8e8;line-height:1.6}
+    a{color:#4ade80;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .nav{max-width:860px;margin:0 auto;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+    .nav .logo{font-weight:800;font-size:1rem;color:#fff}
+    .nav-links{display:flex;gap:20px;align-items:center;font-size:0.9rem}
+    .nav-links a{color:#aaa}
+    .nav-links a:hover{color:#fff;text-decoration:none}
+    .hero{max-width:860px;margin:0 auto;padding:60px 24px 50px;text-align:center}
+    .hero h1{font-size:2.6rem;font-weight:900;color:#fff;line-height:1.2;margin-bottom:16px}
+    .hero p{font-size:1.1rem;color:#aaa;max-width:540px;margin:0 auto 32px}
+    .btn-primary{display:inline-flex;align-items:center;justify-content:center;background:#c0392b;color:#fff;font-weight:700;padding:14px 28px;border-radius:8px;font-size:1rem;transition:background 0.2s}
+    .btn-primary:hover{background:#a93226;text-decoration:none}
+    .btn-secondary{display:inline-flex;align-items:center;justify-content:center;background:#2980b9;color:#fff;font-weight:700;padding:14px 28px;border-radius:8px;font-size:1rem;transition:background 0.2s}
+    .btn-secondary:hover{background:#1f6fa1;text-decoration:none}
+    .btn-book{display:inline-flex;align-items:center;justify-content:center;background:#4ade80;color:#000;font-weight:700;padding:14px 28px;border-radius:8px;font-size:1rem;transition:background 0.2s}
+    .btn-book:hover{background:#22c55e;text-decoration:none}
+    .cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:16px}
+    .section{max-width:860px;margin:0 auto;padding:40px 24px}
+    .section-title{font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:24px;border-bottom:1px solid #1e1e1e;padding-bottom:12px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media(max-width:600px){.grid-2{grid-template-columns:1fr}.hero h1{font-size:2rem}}
+    .card{background:#141414;border:1px solid #222;border-radius:12px;padding:24px;transition:border-color 0.2s}
+    .card:hover{border-color:#4ade80}
+    .card h3{font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:8px}
+    .card p{color:#999;font-size:0.9rem;margin-bottom:14px}
+    .tag{display:inline-block;font-size:0.7rem;font-weight:700;padding:3px 10px;border-radius:20px;margin-bottom:10px;text-transform:uppercase;letter-spacing:0.05em}
+    .tag-red{background:#2a1010;color:#c0392b}
+    .tag-blue{background:#0d1e2e;color:#2980b9}
+    .tag-green{background:#0d1e15;color:#4ade80}
+    .social-row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+    .social-btn{display:inline-flex;align-items:center;gap:8px;background:#1a1a1a;border:1px solid #2a2a2a;color:#ccc;padding:10px 18px;border-radius:8px;font-size:0.9rem;transition:border-color 0.2s}
+    .social-btn:hover{border-color:#4ade80;color:#fff;text-decoration:none}
+    footer{text-align:center;padding:32px 24px;color:#555;font-size:0.8rem;border-top:1px solid #1a1a1a;margin-top:20px}
   </style>
 </head>
 <body>
-  <nav class="nav">
-    <span class="logo">🤖 The Automated Doctor</span>
-    <a href="/book">Get the Book →</a>
-  </nav>
 
-  <section class="hero">
-    <h1>AI that runs your life.<br>No code required.</h1>
-    <p>Practical guides on AI agents, automation, and building systems that handle your admin — so you don't have to.</p>
-    <a href="https://a.co/d/0cs0zZDb" class="cta-btn" rel="noopener">📘 Get the Book on Amazon</a>
-  </section>
+<nav class="nav">
+  <span class="logo">🤖 The Automated Doctor</span>
+  <div class="nav-links">
+    <a href="/blog/">Blog</a>
+    <a href="https://quiz.theautomateddoctor.com">Quizzes</a>
+    <a href="https://a.co/d/0cs0zZDb">Book</a>
+  </div>
+</nav>
 
-  <section class="articles">
-    <h2>Latest Articles</h2>
+<section class="hero">
+  <h1>Doctor. Builder. Automator.</h1>
+  <p>AI systems for people who don't have time. Psychology quizzes grounded in clinical research. No-code guides that actually work.</p>
+  <div class="cta-row">
+    <a href="https://quiz.theautomateddoctor.com" class="btn-primary">🧠 Dark Triad Quiz</a>
+    <a href="https://quiz.theautomateddoctor.com/gaslighting" class="btn-secondary">🔍 Gaslighting Quiz</a>
+    <a href="https://a.co/d/0cs0zZDb" class="btn-book" rel="noopener" target="_blank">📘 Get the Book</a>
+  </div>
+</section>
 
-    <article class="card">
-      <span class="tag">Beginner Guide</span>
-      <h3><a href="/blog/ai-agents-for-beginners/">What Are AI Agents? A Beginner's Guide to Autonomous AI</a></h3>
-      <p>AI agents can book appointments, sort your inbox, and manage your calendar — all while you sleep. Here's what they actually are and how to use them without any technical background.</p>
-      <a href="/blog/ai-agents-for-beginners/">Read the guide →</a>
-    </article>
+<section class="section">
+  <div class="section-title">Psychology Assessments</div>
+  <div class="grid-2">
+    <div class="card">
+      <span class="tag tag-red">Validated Assessment</span>
+      <h3>Dark Triad Profiler</h3>
+      <p>Narcissism, Machiavellianism, Psychopathy. Based on NPI-16, Levenson SRPS, and MACH-IV scales. Takes 3 minutes.</p>
+      <a href="https://quiz.theautomateddoctor.com">Take the test →</a>
+    </div>
+    <div class="card">
+      <span class="tag tag-blue">Free + Paid Report</span>
+      <h3>Gaslighting Questionnaire</h3>
+      <p>A clinical pattern-check. Not a diagnosis — a structured way to notice what's been happening. Includes a Reality Grounding Guide.</p>
+      <a href="https://quiz.theautomateddoctor.com/gaslighting">Take the quiz →</a>
+    </div>
+  </div>
+</section>
 
-    <article class="card">
-      <span class="tag">No-Code</span>
-      <h3><a href="/blog/ai-automation-without-coding/">AI Automation Without Coding: 5 Tools That Do the Work For You</a></h3>
-      <p>You don't need to be a developer to automate your life with AI. These five tools let you build powerful workflows in an afternoon — no programming knowledge required.</p>
-      <a href="/blog/ai-automation-without-coding/">Read the guide →</a>
-    </article>
+<section class="section">
+  <div class="section-title">Books</div>
+  <div class="card">
+    <span class="tag tag-green">Now on Amazon Kindle</span>
+    <h3>AI Agents for Busy People — Book 1 of 3</h3>
+    <p>How to use AI agents to run your life admin — inbox, calendar, bills, and more. No coding required. Written by a practicing doctor who built a 10-agent AI system.</p>
+    <a href="https://a.co/d/0cs0zZDb" rel="noopener" target="_blank">Get it on Amazon →</a>
+  </div>
+</section>
 
-    <article class="card">
-      <span class="tag">Personal AI</span>
-      <h3><a href="/blog/build-a-personal-ai-assistant/">How to Build a Personal AI Assistant That Actually Knows You</a></h3>
-      <p>Generic AI chatbots give generic answers. A personal AI assistant that knows your schedule, your priorities, and your preferences is a completely different thing. Here's how to build one.</p>
-      <a href="/blog/build-a-personal-ai-assistant/">Read the guide →</a>
-    </article>
-  </section>
+<section class="section">
+  <div class="section-title">Latest Articles</div>
+  <div class="card" style="margin-bottom:12px">
+    <span class="tag tag-green">Beginner Guide</span>
+    <h3><a href="/blog/ai-agents-for-beginners/">What Are AI Agents? A Beginner's Guide</a></h3>
+    <p>AI agents can manage your inbox, book appointments, and run your calendar — all without coding knowledge.</p>
+    <a href="/blog/ai-agents-for-beginners/">Read →</a>
+  </div>
+  <div class="card" style="margin-bottom:12px">
+    <span class="tag tag-green">No-Code</span>
+    <h3><a href="/blog/ai-automation-without-coding/">AI Automation Without Coding</a></h3>
+    <p>Five tools that let you build powerful AI workflows in an afternoon, no programming required.</p>
+    <a href="/blog/ai-automation-without-coding/">Read →</a>
+  </div>
+  <div class="card">
+    <span class="tag tag-green">Personal AI</span>
+    <h3><a href="/blog/build-a-personal-ai-assistant/">How to Build a Personal AI Assistant</a></h3>
+    <p>Generic AI chatbots give generic answers. Here's how to build one that actually knows you.</p>
+    <a href="/blog/build-a-personal-ai-assistant/">Read →</a>
+  </div>
+</section>
 
-  <footer>
-    <p>© 2026 The Automated Doctor · <a href="https://a.co/d/0cs0zZDb">Get the book on Amazon</a></p>
-  </footer>
+<section class="section" style="text-align:center">
+  <div class="section-title">Find Us</div>
+  <div class="social-row">
+    <a href="https://x.com/PadawanQuill" class="social-btn" target="_blank">𝕏 Twitter/X</a>
+    <a href="https://www.tiktok.com/@theautomateddoctor" class="social-btn" target="_blank">TikTok</a>
+    <a href="https://www.instagram.com/theautomateddoctor" class="social-btn" target="_blank">Instagram</a>
+    <a href="https://www.youtube.com/@mindarchive-m5b" class="social-btn" target="_blank">YouTube</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 The Automated Doctor · <a href="https://a.co/d/0cs0zZDb">Get the Book on Amazon</a> · <a href="https://quiz.theautomateddoctor.com">Take a Quiz</a></p>
+</footer>
+
 </body>
 </html>
